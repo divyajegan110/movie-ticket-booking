@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Ticket Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Movie Selection Page -->
+  <div id="movie-selection" class="page active">
+    <h1>D-MovieTickets</h1>
+    <div class="movies">
+      <div class="movie">
+        <img src="images/wp8751605-teddy-movie-wallpapers.jpg" alt="Movie 1" class="movie-poster">
+        <h2>Movie 1</h2>
+        <button class="showtime-btn" data-movie="Movie 1" data-time="10:00 AM">10:00 AM</button>
+        <button class="showtime-btn" data-movie="Movie 1" data-time="1:00 PM">1:00 PM</button>
+        <button class="showtime-btn" data-movie="Movie 1" data-time="4:00 PM">4:00 PM</button>
+      </div>
+      <div class="movie">
+        <img src="images/wp8812707-sulthan-tamil-movie-wallpapers.jpg" alt="Movie 2" class="movie-poster">
+        <h2>Movie 2</h2>
+        <button class="showtime-btn" data-movie="Movie 2" data-time="11:00 AM">11:00 AM</button>
+        <button class="showtime-btn" data-movie="Movie 2" data-time="2:00 PM">2:00 PM</button>
+        <button class="showtime-btn" data-movie="Movie 2" data-time="5:00 PM">5:00 PM</button>
+      </div>
+      <div class="movie">
+        <img src="images/wp9309295-tamil-movie-poster-wallpapers.jpg" alt="Movie 3" class="movie-poster">
+        <h2>Movie 3</h2>
+        <button class="showtime-btn" data-movie="Movie 3" data-time="12:00 PM">12:00 PM</button>
+        <button class="showtime-btn" data-movie="Movie 3" data-time="3:00 PM">3:00 PM</button>
+        <button class="showtime-btn" data-movie="Movie 3" data-time="6:00 PM">6:00 PM</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Seat Selection Page -->
+  <div id="seat-booking" class="page hidden">
+    <h1>Select Your Seats</h1>
+    <h2 id="selected-movie">Movie: <span id="billing-movie-name"></span></h2>
+    <h3 id="selected-time">Showtime: <span id="billing-show-time"></span></h3>
+
+    <div id="seats-container" class="seats-container"></div>
+
+    <p id="total-price">Total: ₹0</p>
+    <div class="controls">
+      <button id="back-to-movie-selection">Back</button>
+      <button id="book-tickets">Book Tickets</button>
+    </div>
+  </div>
+
+  <!-- Billing Page -->
+  <div id="billing-page" class="page hidden">
+    <h1>Billing Details</h1>
+    <div class="billing-details">
+      <p>Movie: <span id="billing-movie-name"></span></p>
+      <p>Showtime: <span id="billing-show-time"></span></p>
+      <p>Tickets: <span id="billing-ticket-count"></span></p>
+      <p>Total: ₹<span id="billing-total"></span></p>
+      <p>Seats: <span id="billing-seats"></span></p>
+    </div>
+    <div class="controls">
+      <button id="back-to-seat-booking">Back</button>
+      <button id="proceed-to-payment">Proceed to Payment</button>
+    </div>
+  </div>
+
+  <!-- Payment Page -->
+  <div id="payment-page" class="page hidden">
+    <h1>Payment Page</h1>
+    <p>Thank you for your purchase. Payment gateway integration is coming soon!</p>
+    <button id="back-to-billing">Back</button>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

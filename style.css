@@ -1,0 +1,148 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f8fc;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  color: #ff5733;
+  font-size: 2.5rem; /* Larger for App Name */
+}
+
+h2, h3 {
+  text-align: center;
+  color: #333;
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #ff5733;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff3300;
+}
+
+.movies {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.movie {
+  width: 30%;
+  text-align: center;
+}
+
+.movie img.movie-poster {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.movie img.movie-poster:hover {
+  transform: scale(1.05);
+}
+
+.showtime-btn {
+  width: 100%;
+  margin: 5px 0;
+}
+
+.seat-row {
+  display: flex;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+.seat {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  background-color: #ddd;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.seat.available:hover {
+  background-color: #b4ffb4;
+}
+
+.seat.selected {
+  background-color: #33cc33;
+}
+
+.seat.sold {
+  background-color: #ff3333;
+  cursor: not-allowed;
+}
+
+.controls {
+  text-align: center;
+  margin: 20px;
+}
+
+.billing-details p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+#total-price {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+#selected-seats {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
+  color: #ff5733;
+}
+
+.seat-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); /* Adjust columns */
+  gap: 10px;
+}
+
+#back-to-movie-selection, #book-tickets, #back-to-seat-booking, #proceed-to-payment {
+  background-color: #ff5733;
+  color: white;
+  font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#back-to-movie-selection:hover, #book-tickets:hover, #back-to-seat-booking:hover, #proceed-to-payment:hover {
+  background-color: #ff3300;
+}
